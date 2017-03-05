@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+      <a href="" class="navbar-brand">Tiago developer</a>
+    </div>
+    <div *ngIf="isLoggedIn">
+      <p class="navbar-text navbar-right">Logged in: {{ user_displayName }}</p>
+    </div>
+    <div *ngIf="!isLoggedIn">
+      <p class="navbar-text navbar-right">Logged Out!</p>
+    </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+
